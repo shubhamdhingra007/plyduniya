@@ -5,6 +5,7 @@ const app = express()
 app.use('/public', express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
+    console.log('/ hit on server')
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
