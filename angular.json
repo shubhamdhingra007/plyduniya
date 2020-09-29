@@ -24,11 +24,12 @@
             "tsConfig": "projects/quotation/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/quotation/src/favicon.ico",
+              "projects/quotation/src/favicon.png",
               "projects/quotation/src/assets"
             ],
             "styles": [
-              "projects/quotation/src/styles.scss"
+              "projects/quotation/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -86,7 +87,7 @@
             "tsConfig": "projects/quotation/tsconfig.spec.json",
             "karmaConfig": "projects/quotation/karma.conf.js",
             "assets": [
-              "projects/quotation/src/favicon.ico",
+              "projects/quotation/src/favicon.png",
               "projects/quotation/src/assets"
             ],
             "styles": [
