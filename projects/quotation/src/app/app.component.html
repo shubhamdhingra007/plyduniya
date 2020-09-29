@@ -1,11 +1,193 @@
-<div id="test-download">
-  <div class="jumbotron">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-      featured
-      content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+<main class="main-container">
+  <a href="https://www.plyduniya.com/" class="back-button btn btn-light">
+    <svg width="1.5rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-arrow-left-short" fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd"
+        d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+    </svg>
+  </a>
+  <div class="content-container">
+    <div class="align-items-center d-flex px-4 py-3 header">
+      <img src="assets/plyduniya-tree.png" alt="banner" />
+      <div class="ml-4">
+        <h3>Plyduniya</h3>
+        <p class="m-0 small text-uppercase">The Plywood people since 1985</p>
+      </div>
+    </div>
+    <form class="content" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <h5 class="mb-1">A little about you</h5>
+      <p class="text-muted small">It helps in getting back to you for any query or blah blah blah</p>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstName">First Name <span class="text-danger">*</span></label>
+          <input type="text" [formControlName]="formConstants.FIRST_NAME" placeholder="John"
+            [ngClass]="{'is-invalid': profileForm.get(formConstants.FIRST_NAME)?.invalid && (profileForm.get(formConstants.FIRST_NAME)?.dirty || profileForm.get(formConstants.FIRST_NAME)?.touched)}"
+            class="form-control" id="firstName">
+          <div
+            *ngIf="profileForm.get(formConstants.FIRST_NAME)?.invalid && (profileForm.get(formConstants.FIRST_NAME)?.dirty || profileForm.get(formConstants.FIRST_NAME)?.touched)"
+            class="invalid-feedback">
+            <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.required">
+              First name is required.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.minlength">
+              First name must be at least 1 character long.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.maxlength">
+              First name must not exceed 50 characters.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.pattern">
+              Only alphabets and numbers are allowed.
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastName">Last Name</label>
+          <input type="text" [formControlName]="formConstants.LAST_NAME" placeholder="Doe" [ngClass]="{'is-invalid': profileForm.get(formConstants.LAST_NAME)?.invalid &&
+            (profileForm.get(formConstants.LAST_NAME)?.dirty || profileForm.get(formConstants.LAST_NAME)?.touched)}"
+            class="form-control" id="lastName">
+          <div
+            *ngIf="profileForm.get(formConstants.LAST_NAME)?.invalid && (profileForm.get(formConstants.LAST_NAME)?.dirty || profileForm.get(formConstants.LAST_NAME)?.touched)"
+            class="invalid-feedback">
+            <div *ngIf="profileForm.get(formConstants.LAST_NAME)?.errors?.minlength">
+              Last name must be at least 1 character long.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.LAST_NAME)?.errors?.maxlength">
+              Last name must not exceed 50 characters.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.LAST_NAME)?.errors?.pattern">
+              Only alphabets and numbers are allowed.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputAddress1">Address Line 1 <span class="text-danger">*</span></label>
+          <textarea class="form-control" [formControlName]="formConstants.STREET_1" id="inputAddress1" [ngClass]="{'is-invalid': profileForm.get(formConstants.STREET_1)?.invalid &&
+          (profileForm.get(formConstants.STREET_1)?.dirty || profileForm.get(formConstants.STREET_1)?.touched)}"
+            placeholder="34, Concorde Conclave"></textarea>
+          <div
+            *ngIf="profileForm.get(formConstants.STREET_1)?.invalid && (profileForm.get(formConstants.STREET_1)?.dirty || profileForm.get(formConstants.STREET_1)?.touched)"
+            class="invalid-feedback">
+            <div *ngIf="profileForm.get(formConstants.STREET_1)?.errors?.required">
+              Address is required.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.STREET_1)?.errors?.minlength">
+              Address must be at least 10 characters long.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.STREET_1)?.errors?.maxlength">
+              Address must not exceed 100 characters.
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputAddress2">Address Line 2</label>
+          <textarea class="form-control" [formControlName]="formConstants.STREET_2" id="inputAddress2" [ngClass]="{'is-invalid': profileForm.get(formConstants.STREET_2)?.invalid &&
+          (profileForm.get(formConstants.STREET_2)?.dirty || profileForm.get(formConstants.STREET_2)?.touched)}"
+            placeholder="Abc Road, Rajajinagar"></textarea>
+          <div
+            *ngIf="profileForm.get(formConstants.STREET_2)?.invalid && (profileForm.get(formConstants.STREET_2)?.dirty || profileForm.get(formConstants.STREET_2)?.touched)"
+            class="invalid-feedback">
+            <div *ngIf="profileForm.get(formConstants.STREET_2)?.errors?.required">
+              Address is required.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.STREET_2)?.errors?.minlength">
+              Address must be at least 10 characters long.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.STREET_2)?.errors?.maxlength">
+              Address must not exceed 100 characters.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City <span class="text-danger">*</span></label>
+          <input type="text" [formControlName]="formConstants.CITY" placeholder="Bangalore" class="form-control"
+            [ngClass]="{'is-invalid': profileForm.get(formConstants.CITY)?.invalid &&
+          (profileForm.get(formConstants.CITY)?.dirty || profileForm.get(formConstants.CITY)?.touched)}"
+            id="inputCity">
+          <div
+            *ngIf="profileForm.get(formConstants.CITY)?.invalid && (profileForm.get(formConstants.CITY)?.dirty || profileForm.get(formConstants.CITY)?.touched)"
+            class="invalid-feedback">
+            <div *ngIf="profileForm.get(formConstants.CITY)?.errors?.required">
+              City is required.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.CITY)?.errors?.pattern">
+              Invalid city name.
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">State <span class="text-danger">*</span></label>
+          <input type="text" [formControlName]="formConstants.STATE" placeholder="Karnataka" class="form-control"
+            [ngClass]="{'is-invalid': profileForm.get(formConstants.STATE)?.invalid &&
+          (profileForm.get(formConstants.STATE)?.dirty || profileForm.get(formConstants.STATE)?.touched)}"
+            id="inputState">
+          <div
+            *ngIf="profileForm.get(formConstants.STATE)?.invalid && (profileForm.get(formConstants.STATE)?.dirty || profileForm.get(formConstants.STATE)?.touched)"
+            class="invalid-feedback">
+            <div *ngIf="profileForm.get(formConstants.STATE)?.errors?.required">
+              State name is required.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.STATE)?.errors?.pattern">
+              Invalid state name.
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Zip <span class="text-danger">*</span></label>
+          <input type="text" [formControlName]="formConstants.ZIP_CODE" placeholder="560001" class="form-control"
+            [ngClass]="{'is-invalid': profileForm.get(formConstants.ZIP_CODE)?.invalid &&
+          (profileForm.get(formConstants.ZIP_CODE)?.dirty || profileForm.get(formConstants.ZIP_CODE)?.touched)}"
+            id="inputZip">
+          <div
+            *ngIf="profileForm.get(formConstants.ZIP_CODE)?.invalid && (profileForm.get(formConstants.ZIP_CODE)?.dirty || profileForm.get(formConstants.ZIP_CODE)?.touched)"
+            class="invalid-feedback">
+            <div *ngIf="profileForm.get(formConstants.ZIP_CODE)?.errors?.required">
+              Zip code is required.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.ZIP_CODE)?.errors?.pattern">
+              Invalid zip.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputPhone">Phone <span class="text-danger">*</span></label>
+          <input type="text" [formControlName]="formConstants.PHONE" class="form-control" id="inputPhone" [ngClass]="{'is-invalid': profileForm.get(formConstants.PHONE)?.invalid &&
+          (profileForm.get(formConstants.PHONE)?.dirty || profileForm.get(formConstants.PHONE)?.touched)}"
+            placeholder="1234567890">
+          <div
+            *ngIf="profileForm.get(formConstants.PHONE)?.invalid && (profileForm.get(formConstants.PHONE)?.dirty || profileForm.get(formConstants.PHONE)?.touched)"
+            class="invalid-feedback">
+            <div *ngIf="profileForm.get(formConstants.PHONE)?.errors?.required">
+              Phone number is required.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.PHONE)?.errors?.pattern">
+              Invalid phone number.
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail">Email <span class="text-danger">*</span></label>
+          <input type="email" [formControlName]="formConstants.EMAIL" class="form-control" id="inputEmail" [ngClass]="{'is-invalid': profileForm.get(formConstants.EMAIL)?.invalid &&
+          (profileForm.get(formConstants.EMAIL)?.dirty || profileForm.get(formConstants.EMAIL)?.touched)}"
+            placeholder="abc@email.com">
+          <div
+            *ngIf="profileForm.get(formConstants.EMAIL)?.invalid && (profileForm.get(formConstants.EMAIL)?.dirty || profileForm.get(formConstants.EMAIL)?.touched)"
+            class="invalid-feedback">
+            <div *ngIf="profileForm.get(formConstants.EMAIL)?.errors?.required">
+              EMAIL is required.
+            </div>
+            <div *ngIf="profileForm.get(formConstants.EMAIL)?.errors?.pattern">
+              Invalid EMAIL.
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="mt-3">Order Details</h5>
+    </form>
   </div>
-</div>
+</main>
