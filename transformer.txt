@@ -1,0 +1,50 @@
+private fetchPriceList(): void {
+    this.apiSvc.getPriceList().subscribe(
+      data => {
+        data.forEach(element => {
+          if (!isNaN(Number(element.Size))) {
+            element.length = Number(element.Size[0]);
+            element.width = Number(element.Size[1]);
+            element.size = `${element.length}x${element.width}`,
+              element.isSizingApplicable = true;
+          } else {
+            element.isSizingApplicable = false;
+          }
+          element.rate = Number(element.Rate.split(',').map(u => u.trim()).join(''));
+          element.brand = element.Brand.trim();
+          element.grade = element.Grade.trim();
+          element.particulars = element.Particulars.trim();
+          delete element.Brand;
+          delete element.Grade;
+          delete element.Rate;
+          delete element.Particulars;
+          delete element.Size;
+        });
+        console.log(data);
+        const allBrands = [...new Set(data.map(u => u.brand))];
+        const formattedJson = {};
+        allBrands.forEach((brand: string) => {
+          const brandItems = data.filter(u => u.brand === brand);
+          const brandGrades = [...new Set(brandItems.map(u => u.grade))] as string[];
+          const gradeData = {};
+          brandGrades.forEach((grade) => {
+            const gradedItems = brandItems.filter(u => u.grade === grade);
+            const unitGradeData = [];
+            gradedItems.forEach(element => {
+              unitGradeData.push({
+                rate: element.rate,
+                isSizingApplicable: element.isSizingApplicable,
+                particulars: element.particulars,
+                length: element.length,
+                width: element.width,
+                size: element.size
+              });
+            });
+            gradeData[grade] = unitGradeData;
+          });
+          formattedJson[brand] = gradeData;
+        });
+        console.log(formattedJson);
+      }
+    );
+  }

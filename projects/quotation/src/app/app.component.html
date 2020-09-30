@@ -7,187 +7,310 @@
     </svg>
   </a>
   <div class="content-container">
-    <div class="align-items-center d-flex px-4 py-3 header">
-      <img src="assets/plyduniya-tree.png" alt="banner" />
-      <div class="ml-4">
-        <h3>Plyduniya</h3>
-        <p class="m-0 small text-uppercase">The Plywood people since 1985</p>
+    <div class="d-flex align-items-center justify-content-between px-4 py-3 header">
+      <div class="d-flex align-items-center">
+        <img src="assets/plyduniya-tree.png" alt="banner" />
+        <div class="ml-4">
+          <h3>Plyduniya</h3>
+          <p class="m-0 small text-uppercase">The Plywood people since 1985</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <a href="mailto:support@plyduniya.com?Subject=Query%20related%20to%20" class="text-decoration-none">
+            <svg width="1.2rem" height="1.2rem" viewBox="0 0 16 16" class="bi bi-mailbox" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4 4a3 3 0 0 0-3 3v6h6V7a3 3 0 0 0-3-3zm0-1h8a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4zm2.646 1A3.99 3.99 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3H6.646z" />
+              <path fill-rule="evenodd"
+                d="M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854z" />
+              <path d="M5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z" />
+            </svg>
+            &nbsp;&nbsp;support@plyduniya.com
+          </a>
+        </div>
+        <div class="my-1">
+          <a href="tel:9986461003" class="text-decoration-none">
+            <svg width="1rem" height="1rem" viewBox="0 0 16 16" class="bi bi-telephone-outbound" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            &nbsp;&nbsp; 9986461003
+          </a>
+        </div>
+        <div>
+          <a href="https://wa.me/919986461003?text=Hello%20!!%20Iam%20interested%20in%20purchasing%20plywood%20and%20laminates"
+            class="text-decoration-none">
+            <img width="22" src="assets/icons/whatsapp.svg" alt="W">
+            &nbsp;&nbsp;Whatsapp
+          </a>
+        </div>
       </div>
     </div>
-    <form class="content" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-      <h5 class="mb-1">A little about you</h5>
-      <p class="text-muted small">It helps in getting back to you for any query or blah blah blah</p>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="firstName">First Name <span class="text-danger">*</span></label>
-          <input type="text" [formControlName]="formConstants.FIRST_NAME" placeholder="John"
-            [ngClass]="{'is-invalid': profileForm.get(formConstants.FIRST_NAME)?.invalid && (profileForm.get(formConstants.FIRST_NAME)?.dirty || profileForm.get(formConstants.FIRST_NAME)?.touched)}"
-            class="form-control" id="firstName">
-          <div
-            *ngIf="profileForm.get(formConstants.FIRST_NAME)?.invalid && (profileForm.get(formConstants.FIRST_NAME)?.dirty || profileForm.get(formConstants.FIRST_NAME)?.touched)"
-            class="invalid-feedback">
-            <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.required">
-              First name is required.
+    <div class="content">
+      <ng-container *ngIf="uploadingStatus !== 'DONE'; else doneTemplate">
+        <form [formGroup]="profileForm">
+          <h5 class="mb-1">A little about you</h5>
+          <p class="text-muted small">It helps in getting back to you for any query or blah blah blah</p>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstName">First Name <span class="text-danger">*</span></label>
+              <input type="text" [formControlName]="formConstants.FIRST_NAME" placeholder="John"
+                [ngClass]="{'is-invalid': profileForm.get(formConstants.FIRST_NAME)?.invalid && (profileForm.get(formConstants.FIRST_NAME)?.dirty || profileForm.get(formConstants.FIRST_NAME)?.touched)}"
+                class="form-control" id="firstName">
+              <div
+                *ngIf="profileForm.get(formConstants.FIRST_NAME)?.invalid && (profileForm.get(formConstants.FIRST_NAME)?.dirty || profileForm.get(formConstants.FIRST_NAME)?.touched)"
+                class="invalid-feedback">
+                <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.required">
+                  First name is required.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.minlength">
+                  First name must be at least 1 character long.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.maxlength">
+                  First name must not exceed 50 characters.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.pattern">
+                  Only alphabets and numbers are allowed.
+                </div>
+              </div>
             </div>
-            <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.minlength">
-              First name must be at least 1 character long.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.maxlength">
-              First name must not exceed 50 characters.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.FIRST_NAME)?.errors?.pattern">
-              Only alphabets and numbers are allowed.
-            </div>
-          </div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="lastName">Last Name</label>
-          <input type="text" [formControlName]="formConstants.LAST_NAME" placeholder="Doe" [ngClass]="{'is-invalid': profileForm.get(formConstants.LAST_NAME)?.invalid &&
-            (profileForm.get(formConstants.LAST_NAME)?.dirty || profileForm.get(formConstants.LAST_NAME)?.touched)}"
-            class="form-control" id="lastName">
-          <div
-            *ngIf="profileForm.get(formConstants.LAST_NAME)?.invalid && (profileForm.get(formConstants.LAST_NAME)?.dirty || profileForm.get(formConstants.LAST_NAME)?.touched)"
-            class="invalid-feedback">
-            <div *ngIf="profileForm.get(formConstants.LAST_NAME)?.errors?.minlength">
-              Last name must be at least 1 character long.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.LAST_NAME)?.errors?.maxlength">
-              Last name must not exceed 50 characters.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.LAST_NAME)?.errors?.pattern">
-              Only alphabets and numbers are allowed.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputAddress1">Address Line 1 <span class="text-danger">*</span></label>
-          <textarea class="form-control" [formControlName]="formConstants.STREET_1" id="inputAddress1" [ngClass]="{'is-invalid': profileForm.get(formConstants.STREET_1)?.invalid &&
-          (profileForm.get(formConstants.STREET_1)?.dirty || profileForm.get(formConstants.STREET_1)?.touched)}"
-            placeholder="34, Concorde Conclave"></textarea>
-          <div
-            *ngIf="profileForm.get(formConstants.STREET_1)?.invalid && (profileForm.get(formConstants.STREET_1)?.dirty || profileForm.get(formConstants.STREET_1)?.touched)"
-            class="invalid-feedback">
-            <div *ngIf="profileForm.get(formConstants.STREET_1)?.errors?.required">
-              Address is required.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.STREET_1)?.errors?.minlength">
-              Address must be at least 10 characters long.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.STREET_1)?.errors?.maxlength">
-              Address must not exceed 100 characters.
+            <div class="form-group col-md-6">
+              <label for="lastName">Last Name</label>
+              <input type="text" [formControlName]="formConstants.LAST_NAME" placeholder="Doe" [ngClass]="{'is-invalid': profileForm.get(formConstants.LAST_NAME)?.invalid &&
+              (profileForm.get(formConstants.LAST_NAME)?.dirty || profileForm.get(formConstants.LAST_NAME)?.touched)}"
+                class="form-control" id="lastName">
+              <div
+                *ngIf="profileForm.get(formConstants.LAST_NAME)?.invalid && (profileForm.get(formConstants.LAST_NAME)?.dirty || profileForm.get(formConstants.LAST_NAME)?.touched)"
+                class="invalid-feedback">
+                <div *ngIf="profileForm.get(formConstants.LAST_NAME)?.errors?.minlength">
+                  Last name must be at least 1 character long.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.LAST_NAME)?.errors?.maxlength">
+                  Last name must not exceed 50 characters.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.LAST_NAME)?.errors?.pattern">
+                  Only alphabets and numbers are allowed.
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputAddress2">Address Line 2</label>
-          <textarea class="form-control" [formControlName]="formConstants.STREET_2" id="inputAddress2" [ngClass]="{'is-invalid': profileForm.get(formConstants.STREET_2)?.invalid &&
-          (profileForm.get(formConstants.STREET_2)?.dirty || profileForm.get(formConstants.STREET_2)?.touched)}"
-            placeholder="Abc Road, Rajajinagar"></textarea>
-          <div
-            *ngIf="profileForm.get(formConstants.STREET_2)?.invalid && (profileForm.get(formConstants.STREET_2)?.dirty || profileForm.get(formConstants.STREET_2)?.touched)"
-            class="invalid-feedback">
-            <div *ngIf="profileForm.get(formConstants.STREET_2)?.errors?.required">
-              Address is required.
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputAddress1">Address Line 1 <span class="text-danger">*</span></label>
+              <textarea class="form-control" [formControlName]="formConstants.STREET_1" id="inputAddress1" [ngClass]="{'is-invalid': profileForm.get(formConstants.STREET_1)?.invalid &&
+            (profileForm.get(formConstants.STREET_1)?.dirty || profileForm.get(formConstants.STREET_1)?.touched)}"
+                placeholder="34, Concorde Conclave"></textarea>
+              <div
+                *ngIf="profileForm.get(formConstants.STREET_1)?.invalid && (profileForm.get(formConstants.STREET_1)?.dirty || profileForm.get(formConstants.STREET_1)?.touched)"
+                class="invalid-feedback">
+                <div *ngIf="profileForm.get(formConstants.STREET_1)?.errors?.required">
+                  Address is required.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.STREET_1)?.errors?.minlength">
+                  Address must be at least 10 characters long.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.STREET_1)?.errors?.maxlength">
+                  Address must not exceed 100 characters.
+                </div>
+              </div>
             </div>
-            <div *ngIf="profileForm.get(formConstants.STREET_2)?.errors?.minlength">
-              Address must be at least 10 characters long.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.STREET_2)?.errors?.maxlength">
-              Address must not exceed 100 characters.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCity">City <span class="text-danger">*</span></label>
-          <input type="text" [formControlName]="formConstants.CITY" placeholder="Bangalore" class="form-control"
-            [ngClass]="{'is-invalid': profileForm.get(formConstants.CITY)?.invalid &&
-          (profileForm.get(formConstants.CITY)?.dirty || profileForm.get(formConstants.CITY)?.touched)}"
-            id="inputCity">
-          <div
-            *ngIf="profileForm.get(formConstants.CITY)?.invalid && (profileForm.get(formConstants.CITY)?.dirty || profileForm.get(formConstants.CITY)?.touched)"
-            class="invalid-feedback">
-            <div *ngIf="profileForm.get(formConstants.CITY)?.errors?.required">
-              City is required.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.CITY)?.errors?.pattern">
-              Invalid city name.
-            </div>
-          </div>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputState">State <span class="text-danger">*</span></label>
-          <input type="text" [formControlName]="formConstants.STATE" placeholder="Karnataka" class="form-control"
-            [ngClass]="{'is-invalid': profileForm.get(formConstants.STATE)?.invalid &&
-          (profileForm.get(formConstants.STATE)?.dirty || profileForm.get(formConstants.STATE)?.touched)}"
-            id="inputState">
-          <div
-            *ngIf="profileForm.get(formConstants.STATE)?.invalid && (profileForm.get(formConstants.STATE)?.dirty || profileForm.get(formConstants.STATE)?.touched)"
-            class="invalid-feedback">
-            <div *ngIf="profileForm.get(formConstants.STATE)?.errors?.required">
-              State name is required.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.STATE)?.errors?.pattern">
-              Invalid state name.
+            <div class="form-group col-md-6">
+              <label for="inputAddress2">Address Line 2</label>
+              <textarea class="form-control" [formControlName]="formConstants.STREET_2" id="inputAddress2" [ngClass]="{'is-invalid': profileForm.get(formConstants.STREET_2)?.invalid &&
+            (profileForm.get(formConstants.STREET_2)?.dirty || profileForm.get(formConstants.STREET_2)?.touched)}"
+                placeholder="Abc Road, Rajajinagar"></textarea>
+              <div
+                *ngIf="profileForm.get(formConstants.STREET_2)?.invalid && (profileForm.get(formConstants.STREET_2)?.dirty || profileForm.get(formConstants.STREET_2)?.touched)"
+                class="invalid-feedback">
+                <div *ngIf="profileForm.get(formConstants.STREET_2)?.errors?.required">
+                  Address is required.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.STREET_2)?.errors?.minlength">
+                  Address must be at least 10 characters long.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.STREET_2)?.errors?.maxlength">
+                  Address must not exceed 100 characters.
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip <span class="text-danger">*</span></label>
-          <input type="text" [formControlName]="formConstants.ZIP_CODE" placeholder="560001" class="form-control"
-            [ngClass]="{'is-invalid': profileForm.get(formConstants.ZIP_CODE)?.invalid &&
-          (profileForm.get(formConstants.ZIP_CODE)?.dirty || profileForm.get(formConstants.ZIP_CODE)?.touched)}"
-            id="inputZip">
-          <div
-            *ngIf="profileForm.get(formConstants.ZIP_CODE)?.invalid && (profileForm.get(formConstants.ZIP_CODE)?.dirty || profileForm.get(formConstants.ZIP_CODE)?.touched)"
-            class="invalid-feedback">
-            <div *ngIf="profileForm.get(formConstants.ZIP_CODE)?.errors?.required">
-              Zip code is required.
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCity">City <span class="text-danger">*</span></label>
+              <input type="text" [formControlName]="formConstants.CITY" placeholder="Bangalore" class="form-control"
+                [ngClass]="{'is-invalid': profileForm.get(formConstants.CITY)?.invalid &&
+            (profileForm.get(formConstants.CITY)?.dirty || profileForm.get(formConstants.CITY)?.touched)}"
+                id="inputCity">
+              <div
+                *ngIf="profileForm.get(formConstants.CITY)?.invalid && (profileForm.get(formConstants.CITY)?.dirty || profileForm.get(formConstants.CITY)?.touched)"
+                class="invalid-feedback">
+                <div *ngIf="profileForm.get(formConstants.CITY)?.errors?.required">
+                  City is required.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.CITY)?.errors?.pattern">
+                  Invalid city name.
+                </div>
+              </div>
             </div>
-            <div *ngIf="profileForm.get(formConstants.ZIP_CODE)?.errors?.pattern">
-              Invalid zip.
+            <div class="form-group col-md-4">
+              <label for="inputState">State <span class="text-danger">*</span></label>
+              <input type="text" [formControlName]="formConstants.STATE" placeholder="Karnataka" class="form-control"
+                [ngClass]="{'is-invalid': profileForm.get(formConstants.STATE)?.invalid &&
+            (profileForm.get(formConstants.STATE)?.dirty || profileForm.get(formConstants.STATE)?.touched)}"
+                id="inputState">
+              <div
+                *ngIf="profileForm.get(formConstants.STATE)?.invalid && (profileForm.get(formConstants.STATE)?.dirty || profileForm.get(formConstants.STATE)?.touched)"
+                class="invalid-feedback">
+                <div *ngIf="profileForm.get(formConstants.STATE)?.errors?.required">
+                  State name is required.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.STATE)?.errors?.pattern">
+                  Invalid state name.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputZip">Zip <span class="text-danger">*</span></label>
+              <input type="text" [formControlName]="formConstants.ZIP_CODE" placeholder="560001" class="form-control"
+                [ngClass]="{'is-invalid': profileForm.get(formConstants.ZIP_CODE)?.invalid &&
+            (profileForm.get(formConstants.ZIP_CODE)?.dirty || profileForm.get(formConstants.ZIP_CODE)?.touched)}"
+                id="inputZip">
+              <div
+                *ngIf="profileForm.get(formConstants.ZIP_CODE)?.invalid && (profileForm.get(formConstants.ZIP_CODE)?.dirty || profileForm.get(formConstants.ZIP_CODE)?.touched)"
+                class="invalid-feedback">
+                <div *ngIf="profileForm.get(formConstants.ZIP_CODE)?.errors?.required">
+                  Zip code is required.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.ZIP_CODE)?.errors?.pattern">
+                  Invalid zip.
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputPhone">Phone <span class="text-danger">*</span></label>
-          <input type="text" [formControlName]="formConstants.PHONE" class="form-control" id="inputPhone" [ngClass]="{'is-invalid': profileForm.get(formConstants.PHONE)?.invalid &&
-          (profileForm.get(formConstants.PHONE)?.dirty || profileForm.get(formConstants.PHONE)?.touched)}"
-            placeholder="1234567890">
-          <div
-            *ngIf="profileForm.get(formConstants.PHONE)?.invalid && (profileForm.get(formConstants.PHONE)?.dirty || profileForm.get(formConstants.PHONE)?.touched)"
-            class="invalid-feedback">
-            <div *ngIf="profileForm.get(formConstants.PHONE)?.errors?.required">
-              Phone number is required.
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputPhone">Phone <span class="text-danger">*</span></label>
+              <input type="tel" [formControlName]="formConstants.PHONE" class="form-control" id="inputPhone" [ngClass]="{'is-invalid': profileForm.get(formConstants.PHONE)?.invalid &&
+            (profileForm.get(formConstants.PHONE)?.dirty || profileForm.get(formConstants.PHONE)?.touched)}"
+                placeholder="1234567890">
+              <div
+                *ngIf="profileForm.get(formConstants.PHONE)?.invalid && (profileForm.get(formConstants.PHONE)?.dirty || profileForm.get(formConstants.PHONE)?.touched)"
+                class="invalid-feedback">
+                <div *ngIf="profileForm.get(formConstants.PHONE)?.errors?.required">
+                  Phone number is required.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.PHONE)?.errors?.pattern">
+                  Invalid phone number.
+                </div>
+              </div>
             </div>
-            <div *ngIf="profileForm.get(formConstants.PHONE)?.errors?.pattern">
-              Invalid phone number.
+            <div class="form-group col-md-6">
+              <label for="inputEmail">Email <span class="text-danger">*</span></label>
+              <input type="email" [formControlName]="formConstants.EMAIL" class="form-control" id="inputEmail"
+                [ngClass]="{'is-invalid': profileForm.get(formConstants.EMAIL)?.invalid &&
+            (profileForm.get(formConstants.EMAIL)?.dirty || profileForm.get(formConstants.EMAIL)?.touched)}"
+                placeholder="abc@email.com">
+              <div
+                *ngIf="profileForm.get(formConstants.EMAIL)?.invalid && (profileForm.get(formConstants.EMAIL)?.dirty || profileForm.get(formConstants.EMAIL)?.touched)"
+                class="invalid-feedback">
+                <div *ngIf="profileForm.get(formConstants.EMAIL)?.errors?.required">
+                  Email is required.
+                </div>
+                <div *ngIf="profileForm.get(formConstants.EMAIL)?.errors?.pattern">
+                  Invalid Email.
+                </div>
+              </div>
             </div>
           </div>
+        </form>
+        <h5 class="mt-3">Order Details</h5>
+        <table aria-describedby="" class="table table-dark">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Brand</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Size</th>
+              <th scope="col">Particulars</th>
+              <th scope="col">Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let orderEntity of orderList; let i=index">
+              <th class="align-middle" scope="row">{{i+1}}</th>
+              <td style="width: 22%;">
+                <select class="form-control" [(ngModel)]="orderEntity.order.brand" (ngModelChange)="brandChange(i)">
+                  <option [ngValue]="null" disabled>Select Brand</option>
+                  <option [ngValue]="brand" *ngFor="let brand of orderEntity.availableOption.brands">{{brand}}</option>
+                </select>
+              </td>
+              <td style="width: 22%;">
+                <select [disabled]="!orderEntity.availableOption.grades.length" [(ngModel)]="orderEntity.order.grade"
+                  (ngModelChange)="gradeChange(i)" class="form-control">
+                  <option [ngValue]="null" disabled>Select Grade</option>
+                  <option [ngValue]="grade" *ngFor="let grade of orderEntity.availableOption.grades">{{grade}}</option>
+                </select>
+              </td>
+              <td style="width: 14%;">
+                <select [disabled]="!orderEntity.availableOption.sizes.length" [(ngModel)]="orderEntity.order.size"
+                  (ngModelChange)="sizeChange(i)" class="form-control">
+                  <option [ngValue]="null" disabled>--</option>
+                  <option [ngValue]="size" *ngFor="let size of orderEntity.availableOption.sizes">{{size}}</option>
+                </select>
+              </td>
+              <td style="width: 24%;">
+                <select [disabled]="!orderEntity.availableOption.particularDetails.length"
+                  [(ngModel)]="orderEntity.order.particulars" (ngModelChange)="particularsChange(i)"
+                  class="form-control">
+                  <option [ngValue]="null" disabled>Select Particulars</option>
+                  <option [ngValue]="pt" *ngFor="let pt of orderEntity.availableOption.particularDetails">{{pt}}
+                  </option>
+                </select>
+              </td>
+              <td style="width: 12%;">
+                <input class="form-control" [(ngModel)]="orderEntity.order.quantity" type="number">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6" class="text-center">
+                <button (click)="addRows()" [disabled]="orderList.length >= 24" class="btn btn-info">Add more</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="form-group">
+          <label for="fileUpload">Could not find your requirement? Upload your requirement (Max size 1MB)</label>
+          <input type="file" (change)="onFileUpload($event)" class="form-control-file" id="fileUpload">
+          <div *ngIf="errorInFile" class="text-danger">Invalid file size. Max allowed size is 1MB.</div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="inputEmail">Email <span class="text-danger">*</span></label>
-          <input type="email" [formControlName]="formConstants.EMAIL" class="form-control" id="inputEmail" [ngClass]="{'is-invalid': profileForm.get(formConstants.EMAIL)?.invalid &&
-          (profileForm.get(formConstants.EMAIL)?.dirty || profileForm.get(formConstants.EMAIL)?.touched)}"
-            placeholder="abc@email.com">
-          <div
-            *ngIf="profileForm.get(formConstants.EMAIL)?.invalid && (profileForm.get(formConstants.EMAIL)?.dirty || profileForm.get(formConstants.EMAIL)?.touched)"
-            class="invalid-feedback">
-            <div *ngIf="profileForm.get(formConstants.EMAIL)?.errors?.required">
-              EMAIL is required.
-            </div>
-            <div *ngIf="profileForm.get(formConstants.EMAIL)?.errors?.pattern">
-              Invalid EMAIL.
-            </div>
+
+        <div class="form-group my-4">
+          <h5 class="mb-1">Any other query?</h5>
+          <p class="text-muted small mb-2">We will get back to you ASAP blah blah blah</p>
+          <textarea [(ngModel)]="queryFeedback" class="form-control"
+            placeholder="Query for any accessories, delivery, etc. ?" id="query"></textarea>
+        </div>
+
+        <div *ngIf="errorNoOrderData" class="text-danger">Please add some items or upload your requirements file.</div>
+        <div class="text-center my-2">
+          <button class="btn btn-primary" [disabled]="!profileForm.valid || uploadingStatus === 'LOADING'"
+            (click)="onSubmit()">{{uploadingStatus === 'LOADING' ? 'Please Wait...': 'Submit'}}</button>
+        </div>
+      </ng-container>
+      <ng-template #doneTemplate>
+        <div class="card" style="width: 80%; margin: auto;">
+          <div class="card-body">
+            <h4 class="card-title">Thank you!</h4>
+            <p class="card-text">Your submission has been received. The quote will be mailed to you at the registered
+              email id entered by you.</p>
+            <p>You can connect with us in any of the above mentioned channel.</p>
+            <a class="card-link" href="https://plyduniya.com/">Start Shopping</a>
           </div>
         </div>
-      </div>
-      <h5 class="mt-3">Order Details</h5>
-    </form>
+      </ng-template>
+    </div>
   </div>
 </main>

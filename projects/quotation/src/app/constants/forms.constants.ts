@@ -8,6 +8,4 @@ export const PROFILE_FORM_CONSTANTS = {
     ZIP_CODE: 'zipCode',
     PHONE: 'phone',
     EMAIL: 'email',
-    OTHER_LAMINATES: 'otherLaminates',
-    OTHERS: 'others'
 };

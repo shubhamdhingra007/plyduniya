@@ -1,0 +1,907 @@
+{
+  "Green MR": {
+    "MR": [{
+      "rate": 95,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 89,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 68,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 54.5,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 47.5,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 95,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 89,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 68,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 54.5,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 47.5,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }]
+  },
+  "Everest Plywood": {
+    "MR": [{
+      "rate": 80,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 70.25,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 59,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 44,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 36,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 80,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 70.25,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 59,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 44,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 36,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }]
+  },
+  "Green Ecotec": {
+    "MR": [{
+      "rate": 77,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 73,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 55,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 45.5,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 38,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 83,
+      "isSizingApplicable": true,
+      "particulars": "19 mm BB MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }],
+    "BWP": [{
+      "rate": 95,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 68,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 68,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 54.5,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 47.5,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 95,
+      "isSizingApplicable": true,
+      "particulars": "19 mm BB BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }]
+  },
+  "Golden Mr": {
+    "MR": [{
+      "rate": 83,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 73,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 62,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 48,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 38,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 83,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 73,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 62,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 48,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 38,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }]
+  },
+  "Green Gold": {
+    "BWP": [{
+      "rate": 110,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 98,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 77.5,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 62.5,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 52.5,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 107,
+      "isSizingApplicable": true,
+      "particulars": "19 mm BB BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 155,
+      "isSizingApplicable": true,
+      "particulars": "25 mm BB BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 65.5,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply Flexi BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }]
+  },
+  "Golden": {
+    "BWP": [{
+      "rate": 102.5,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 90,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 71,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 57,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 45,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 90,
+      "isSizingApplicable": true,
+      "particulars": "19 mm BB BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 110,
+      "isSizingApplicable": true,
+      "particulars": "25 mm BB BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 55,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply Flexi BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }]
+  },
+  "Green Absolute": {
+    "MR": [{
+      "rate": 72,
+      "isSizingApplicable": true,
+      "particulars": "16 mm ply MR",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 72,
+      "isSizingApplicable": true,
+      "particulars": "16 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }],
+    "BWP": [{
+      "rate": 85,
+      "isSizingApplicable": true,
+      "particulars": "16 mm ply BWP",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 85,
+      "isSizingApplicable": true,
+      "particulars": "16 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }]
+  },
+  "Merino Lam": {
+    "0.8 mm": [{
+      "rate": 550,
+      "isSizingApplicable": false,
+      "particulars": "Frosty White  8 x 4"
+    }]
+  },
+  "Durian": {
+    "0.8 mm": [{
+      "rate": 450,
+      "isSizingApplicable": false,
+      "particulars": "Frosty White  8 x 4"
+    }]
+  },
+  "Fevicol": {
+    "Sh": [{
+      "rate": 915,
+      "isSizingApplicable": false,
+      "particulars": "5 Kg"
+    }, {
+      "rate": 1750,
+      "isSizingApplicable": false,
+      "particulars": "10 Kg"
+    }, {
+      "rate": 3330,
+      "isSizingApplicable": false,
+      "particulars": "20 Kg"
+    }, {
+      "rate": 4800,
+      "isSizingApplicable": false,
+      "particulars": "30 Kg"
+    }, {
+      "rate": 7750,
+      "isSizingApplicable": false,
+      "particulars": "50 Kg"
+    }],
+    "Marine": [{
+      "rate": 1070,
+      "isSizingApplicable": false,
+      "particulars": "5 Kg"
+    }, {
+      "rate": 2050,
+      "isSizingApplicable": false,
+      "particulars": "10 Kg"
+    }, {
+      "rate": 3965,
+      "isSizingApplicable": false,
+      "particulars": "20 Kg"
+    }, {
+      "rate": 9400,
+      "isSizingApplicable": false,
+      "particulars": "50 Kg"
+    }],
+    "Hyper": [{
+      "rate": 1150,
+      "isSizingApplicable": false,
+      "particulars": "5 Kg"
+    }, {
+      "rate": 2150,
+      "isSizingApplicable": false,
+      "particulars": "10 Kg"
+    }, {
+      "rate": 4200,
+      "isSizingApplicable": false,
+      "particulars": "20 Kg"
+    }, {
+      "rate": 6200,
+      "isSizingApplicable": false,
+      "particulars": "30 Kg"
+    }, {
+      "rate": 10700,
+      "isSizingApplicable": false,
+      "particulars": "50 Kg"
+    }],
+    "Probond": [{
+      "rate": 1350,
+      "isSizingApplicable": false,
+      "particulars": "5 Kg"
+    }]
+  },
+  "Green Panel Mdf": {
+    "Plain Interior": [{
+      "rate": 12,
+      "isSizingApplicable": true,
+      "particulars": "3.6 mm Plain Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 17,
+      "isSizingApplicable": true,
+      "particulars": "5.5 mm Plain Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 25,
+      "isSizingApplicable": true,
+      "particulars": "7.5 mm Plain Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 33,
+      "isSizingApplicable": true,
+      "particulars": "11 mm Plain Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 48.25,
+      "isSizingApplicable": true,
+      "particulars": "17 mm Plain Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 82,
+      "isSizingApplicable": true,
+      "particulars": "25 mm Plain Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }],
+    "OSL Interior": [{
+      "rate": 32,
+      "isSizingApplicable": true,
+      "particulars": "5.5 mm OSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 40,
+      "isSizingApplicable": true,
+      "particulars": "7.5 mm OSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 48.5,
+      "isSizingApplicable": true,
+      "particulars": "11 mm OSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 63.5,
+      "isSizingApplicable": true,
+      "particulars": "17 mm OSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 95,
+      "isSizingApplicable": true,
+      "particulars": "25 mm OSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }],
+    "BSL Interior": [{
+      "rate": 35,
+      "isSizingApplicable": true,
+      "particulars": "5.5 mm  BSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 43,
+      "isSizingApplicable": true,
+      "particulars": "7.5 mm BSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 51.5,
+      "isSizingApplicable": true,
+      "particulars": "11 mm BSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 66.5,
+      "isSizingApplicable": true,
+      "particulars": "17 mm BSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 98,
+      "isSizingApplicable": true,
+      "particulars": "25 mm BSL Interior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }],
+    "Plain Exterior": [{
+      "rate": 15,
+      "isSizingApplicable": true,
+      "particulars": "3.6 mm Plain Exterior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 22,
+      "isSizingApplicable": true,
+      "particulars": "5.5 mm Plain Exterior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 32.5,
+      "isSizingApplicable": true,
+      "particulars": "7.5 mm Plain Exterior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 42,
+      "isSizingApplicable": true,
+      "particulars": "11 mm Plain Exterior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 61,
+      "isSizingApplicable": true,
+      "particulars": "17 mm Plain Exterior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }, {
+      "rate": 100,
+      "isSizingApplicable": true,
+      "particulars": "25 mm Plain Exterior",
+      "length": 8,
+      "width": 4,
+      "size": "8x4"
+    }]
+  },
+  "Green Ecotec Mr": {
+    "MR": [{
+      "rate": 77,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 73,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 55,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 45.5,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 38,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 83,
+      "isSizingApplicable": true,
+      "particulars": "19 mm BB MR",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }]
+  },
+  "Green Gold BWP": {
+    "BWP": [{
+      "rate": 110,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 98,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 77.5,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 62.5,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 52.5,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 107,
+      "isSizingApplicable": true,
+      "particulars": "19 mm BB BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 155,
+      "isSizingApplicable": true,
+      "particulars": "25 mm BB BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 65.5,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply Flexi BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }]
+  },
+  "Green Ecotec BWP": {
+    "BWP": [{
+      "rate": 95,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 68,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 68,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 54.5,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 47.5,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 95,
+      "isSizingApplicable": true,
+      "particulars": "19 mm BB BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }]
+  },
+  "Golden BWP": {
+    "BWP": [{
+      "rate": 102.5,
+      "isSizingApplicable": true,
+      "particulars": "18/19 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 90,
+      "isSizingApplicable": true,
+      "particulars": "15/16 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 71,
+      "isSizingApplicable": true,
+      "particulars": "12 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 57,
+      "isSizingApplicable": true,
+      "particulars": "8/9 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 45,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 90,
+      "isSizingApplicable": true,
+      "particulars": "19 mm BB BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 110,
+      "isSizingApplicable": true,
+      "particulars": "25 mm BB BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }, {
+      "rate": 55,
+      "isSizingApplicable": true,
+      "particulars": "6 mm ply Flexi BWP",
+      "length": 7,
+      "width": 4,
+      "size": "7x4"
+    }]
+  }
+}
