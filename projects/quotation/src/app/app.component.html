@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="content">
-      <ng-container *ngIf="uploadingStatus !== 'DONE'; else doneTemplate">
+      <ng-container *ngIf="!formUpdated ; else doneTemplate">
         <form [formGroup]="profileForm">
           <h5 class="mb-1">A little about you</h5>
           <p class="text-muted small">It helps in getting back to you for any query or blah blah blah</p>
@@ -140,8 +140,7 @@
             <div class="form-group col-md-6">
               <label for="inputCity">City <span class="text-danger">*</span></label>
               <input type="text" [formControlName]="formConstants.CITY" placeholder="Bangalore" class="form-control"
-                [ngClass]="{'is-invalid': profileForm.get(formConstants.CITY)?.invalid &&
-            (profileForm.get(formConstants.CITY)?.dirty || profileForm.get(formConstants.CITY)?.touched)}"
+                [ngClass]="{'is-invalid': profileForm.get(formConstants.CITY)?.invalid && (profileForm.get(formConstants.CITY)?.dirty || profileForm.get(formConstants.CITY)?.touched)}"
                 id="inputCity">
               <div
                 *ngIf="profileForm.get(formConstants.CITY)?.invalid && (profileForm.get(formConstants.CITY)?.dirty || profileForm.get(formConstants.CITY)?.touched)"
@@ -295,9 +294,12 @@
         </div>
 
         <div *ngIf="errorNoOrderData" class="text-danger">Please add some items or upload your requirements file.</div>
+        <div *ngIf="formError" class="text-danger">Looks like our server is acting up. Feel free to reach us above.
+        </div>
         <div class="text-center my-2">
-          <button class="btn btn-primary" [disabled]="!profileForm.valid || uploadingStatus === 'LOADING'"
-            (click)="onSubmit()">{{uploadingStatus === 'LOADING' ? 'Please Wait...': 'Submit'}}</button>
+          <button type="button" [disabled]="!profileForm.valid || formUpdating" (click)="onSubmit()"
+            (click)="onSubmit()" class="btn
+            btn-primary">{{formUpdating ? 'Please Wait...' : 'Submit'}} </button>
         </div>
       </ng-container>
       <ng-template #doneTemplate>

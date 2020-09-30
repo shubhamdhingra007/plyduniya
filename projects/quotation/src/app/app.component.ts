@@ -21,9 +21,11 @@ export class AppComponent implements OnInit {
   }[] = [];
   pricingData: IPriceList;
   errorInFile = false;
-  errorNoOrderData = false;
-  uploadingStatus: 'INIT' | 'DONE' | 'LOADING' | 'ERROR' = 'INIT';
   fileData: File;
+  errorNoOrderData = false;
+  formUpdating = false;
+  formUpdated = false;
+  formError = false;
 
   constructor(
     private apiSvc: HttpApiService
@@ -155,17 +157,18 @@ export class AppComponent implements OnInit {
       this.errorNoOrderData = true;
     } else {
       this.errorNoOrderData = false;
+      this.formError = false;
       const data = {
         profile: {
-          firstName: this.profileForm.get(this.formConstants.FIRST_NAME).value,
-          lastName: this.profileForm.get(this.formConstants.FIRST_NAME).value,
-          address1: this.profileForm.get(this.formConstants.STREET_1).value,
-          address2: this.profileForm.get(this.formConstants.LAST_NAME).value,
-          city: this.profileForm.get(this.formConstants.CITY).value,
-          state: this.profileForm.get(this.formConstants.STATE).value,
-          zip: this.profileForm.get(this.formConstants.ZIP_CODE).value,
-          phone: this.profileForm.get(this.formConstants.PHONE).value,
-          email: this.profileForm.get(this.formConstants.EMAIL).value,
+          firstName: this.profileForm.get(PROFILE_FORM_CONSTANTS.FIRST_NAME).value,
+          lastName: this.profileForm.get(PROFILE_FORM_CONSTANTS.FIRST_NAME).value,
+          address1: this.profileForm.get(PROFILE_FORM_CONSTANTS.STREET_1).value,
+          address2: this.profileForm.get(PROFILE_FORM_CONSTANTS.LAST_NAME).value,
+          city: this.profileForm.get(PROFILE_FORM_CONSTANTS.CITY).value,
+          state: this.profileForm.get(PROFILE_FORM_CONSTANTS.STATE).value,
+          zip: this.profileForm.get(PROFILE_FORM_CONSTANTS.ZIP_CODE).value,
+          phone: this.profileForm.get(PROFILE_FORM_CONSTANTS.PHONE).value,
+          email: this.profileForm.get(PROFILE_FORM_CONSTANTS.EMAIL).value,
         },
         order: this.orderList.map(u => u.order).filter(u => Boolean(
           u.brand && u.grade && u.particulars && u.quantity && u.size
@@ -175,14 +178,16 @@ export class AppComponent implements OnInit {
       const formData = new FormData();
       formData.append('data', JSON.stringify(data));
       formData.append('uploadFile', this.fileData);
-      this.uploadingStatus = 'LOADING';
+      this.formUpdating = true;
       this.apiSvc.uploadFile(formData).subscribe(
         _ => {
-          this.uploadingStatus = 'DONE';
+          this.formUpdating = true;
+          this.formUpdated = true;
           this.profileForm.reset();
         },
         _ => {
-          this.uploadingStatus = 'ERROR';
+          this.formUpdating = false;
+          this.formError = true;
         }
       );
     }
