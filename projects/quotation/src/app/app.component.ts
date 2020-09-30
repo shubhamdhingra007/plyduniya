@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+import { environment } from '../environments/environment';
 import { PROFILE_FORM_CONSTANTS } from './constants/forms.constants';
 import { IAvailableOption, IOrder, IPriceList } from './models/pricing.model';
 import { HttpApiService } from './services/http-api.service';
@@ -26,10 +28,15 @@ export class AppComponent implements OnInit {
   formUpdating = false;
   formUpdated = false;
   formError = false;
+  mainBackground: SafeStyle;
 
   constructor(
-    private apiSvc: HttpApiService
+    private apiSvc: HttpApiService,
+    private sanitizer: DomSanitizer,
   ) {
+    this.mainBackground = this.sanitizer.bypassSecurityTrustStyle(
+      `linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.8)), url(${environment.hostingAddOn}/assets/wood-texture.jpg)`
+    );
     this.profileForm = new FormGroup({
       [PROFILE_FORM_CONSTANTS.FIRST_NAME]: new FormControl('', [
         Validators.required,

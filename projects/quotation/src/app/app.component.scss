@@ -1,9 +1,8 @@
 @import 'common-styles/mixins';
 
 .main-container {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.8)),
-    url(/assets/wood-texture.jpg) no-repeat center;
-  background-size: cover;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
   height: 100%;
   padding: 32px 16px;
   position: relative;
