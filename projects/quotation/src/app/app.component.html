@@ -297,8 +297,7 @@
         <div *ngIf="formError" class="text-danger">Looks like our server is acting up. Feel free to reach us above.
         </div>
         <div class="text-center my-2">
-          <button type="button" [disabled]="!profileForm.valid || formUpdating" (click)="onSubmit()"
-            (click)="onSubmit()" class="btn
+          <button type="button" [disabled]="!profileForm.valid || formUpdating" (click)="onSubmit()" class="btn
             btn-primary">{{formUpdating ? 'Please Wait...' : 'Submit'}} </button>
         </div>
       </ng-container>

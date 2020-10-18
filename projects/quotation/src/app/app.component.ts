@@ -168,9 +168,9 @@ export class AppComponent implements OnInit {
       const data = {
         profile: {
           firstName: this.profileForm.get(PROFILE_FORM_CONSTANTS.FIRST_NAME).value,
-          lastName: this.profileForm.get(PROFILE_FORM_CONSTANTS.FIRST_NAME).value,
+          lastName: this.profileForm.get(PROFILE_FORM_CONSTANTS.LAST_NAME).value,
           address1: this.profileForm.get(PROFILE_FORM_CONSTANTS.STREET_1).value,
-          address2: this.profileForm.get(PROFILE_FORM_CONSTANTS.LAST_NAME).value,
+          address2: this.profileForm.get(PROFILE_FORM_CONSTANTS.STREET_2).value,
           city: this.profileForm.get(PROFILE_FORM_CONSTANTS.CITY).value,
           state: this.profileForm.get(PROFILE_FORM_CONSTANTS.STATE).value,
           zip: this.profileForm.get(PROFILE_FORM_CONSTANTS.ZIP_CODE).value,
